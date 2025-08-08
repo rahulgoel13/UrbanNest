@@ -30,35 +30,111 @@
 
     <main class="container">
       <div class="page-header">
-        <h1>Find your home</h1>
+        <h1>Find your dream home</h1>
         <span id="roleNote" class="muted"></span>
       </div>
 
       <div class="toolbar" style="margin-bottom: 14px;">
         <input type="text" placeholder="Search by city, ZIP, or address" />
+        <select>
+          <option value="">Price Range</option>
+          <option value="0-200000">$0 - $200,000</option>
+          <option value="200000-400000">$200,000 - $400,000</option>
+          <option value="400000-600000">$400,000 - $600,000</option>
+          <option value="600000+">$600,000+</option>
+        </select>
+        <select>
+          <option value="">Bedrooms</option>
+          <option value="1">1+ Bedrooms</option>
+          <option value="2">2+ Bedrooms</option>
+          <option value="3">3+ Bedrooms</option>
+          <option value="4">4+ Bedrooms</option>
+        </select>
         <button class="btn">Search</button>
       </div>
 
       <section class="grid">
         <article class="listing-card">
-          <div class="img"></div>
+          <div class="img" style="background: linear-gradient(135deg, #2563eb, #3b82f6), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=60') center/cover;"></div>
           <div class="body">
             <h3>Modern Family Home</h3>
-            <p class="meta">3 bed · 2 bath · 1,800 sqft · $450,000</p>
+            <p class="meta">📍 Downtown District • 3 bed • 2.5 bath • 2,200 sqft</p>
+            <div class="price">$485,000</div>
+            <p class="description">Beautiful modern home with open floor plan, updated kitchen, and spacious backyard. Perfect for families!</p>
+            <div class="actions">
+              <button class="btn">View Details</button>
+              <button class="btn ghost">Save</button>
+            </div>
           </div>
         </article>
+
         <article class="listing-card">
-          <div class="img"></div>
+          <div class="img" style="background: linear-gradient(135deg, #2563eb, #3b82f6), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=60') center/cover;"></div>
           <div class="body">
-            <h3>Urban Apartment</h3>
-            <p class="meta">2 bed · 1 bath · 900 sqft · $320,000</p>
+            <h3>Luxury Condo</h3>
+            <p class="meta">📍 City Center • 2 bed • 2 bath • 1,100 sqft</p>
+            <div class="price">$325,000</div>
+            <p class="description">Stunning luxury condo with city views, modern amenities, and secure parking. Ideal for professionals!</p>
+            <div class="actions">
+              <button class="btn">View Details</button>
+              <button class="btn ghost">Save</button>
+            </div>
           </div>
         </article>
+
         <article class="listing-card">
-          <div class="img"></div>
+          <div class="img" style="background: linear-gradient(135deg, #2563eb, #3b82f6), url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=60') center/cover;"></div>
           <div class="body">
-            <h3>Cozy Cottage</h3>
-            <p class="meta">2 bed · 1 bath · 1,100 sqft · $280,000</p>
+            <h3>Cozy Townhouse</h3>
+            <p class="meta">📍 Suburban Area • 3 bed • 2.5 bath • 1,800 sqft</p>
+            <div class="price">$395,000</div>
+            <p class="description">Charming townhouse with private garden, updated appliances, and excellent school district.</p>
+            <div class="actions">
+              <button class="btn">View Details</button>
+              <button class="btn ghost">Save</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="listing-card">
+          <div class="img" style="background: linear-gradient(135deg, #2563eb, #3b82f6), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=60') center/cover;"></div>
+          <div class="body">
+            <h3>Waterfront Villa</h3>
+            <p class="meta">📍 Lakeside • 4 bed • 3.5 bath • 3,200 sqft</p>
+            <div class="price">$875,000</div>
+            <p class="description">Exclusive waterfront property with private dock, panoramic views, and luxury finishes throughout.</p>
+            <div class="actions">
+              <button class="btn">View Details</button>
+              <button class="btn ghost">Save</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="listing-card">
+          <div class="img" style="background: linear-gradient(135deg, #2563eb, #3b82f6), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=60') center/cover;"></div>
+          <div class="body">
+            <h3>Urban Loft</h3>
+            <p class="meta">📍 Arts District • 1 bed • 1 bath • 850 sqft</p>
+            <div class="price">$245,000</div>
+            <p class="description">Stylish urban loft with exposed brick, high ceilings, and walking distance to restaurants and shops.</p>
+            <div class="actions">
+              <button class="btn">View Details</button>
+              <button class="btn ghost">Save</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="listing-card">
+          <div class="img" style="background: linear-gradient(135deg, #2563eb, #3b82f6), url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=60') center/cover;"></div>
+          <div class="body">
+            <h3>Historic Victorian</h3>
+            <p class="meta">📍 Historic District • 4 bed • 3 bath • 2,800 sqft</p>
+            <div class="price">$695,000</div>
+            <p class="description">Beautifully restored Victorian home with original details, modern updates, and large wrap-around porch.</p>
+            <div class="actions">
+              <button class="btn">View Details</button>
+              <button class="btn ghost">Save</button>
+            </div>
           </div>
         </article>
       </section>

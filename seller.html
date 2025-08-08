@@ -30,34 +30,68 @@
 
     <main class="container">
       <div class="page-header">
-        <h1>Sell your property</h1>
+        <h1>Manage your properties</h1>
         <span id="roleNote" class="muted"></span>
       </div>
 
       <section class="card" style="margin-bottom: 16px;">
-        <h2>Create a listing</h2>
-        <p class="muted">Coming soon — add photos, price, and details.</p>
+        <h2>Create a new listing</h2>
+        <p class="muted">Add photos, price, and details to reach more buyers.</p>
         <div class="toolbar">
           <input type="text" placeholder="Property title" />
           <input type="text" placeholder="Location" />
           <input type="text" placeholder="Price" />
-          <button class="btn">Save draft</button>
+          <select>
+            <option value="">Property Type</option>
+            <option value="house">House</option>
+            <option value="condo">Condo</option>
+            <option value="townhouse">Townhouse</option>
+            <option value="apartment">Apartment</option>
+          </select>
+          <button class="btn">Create Listing</button>
         </div>
       </section>
 
       <section class="grid">
         <article class="listing-card">
-          <div class="img"></div>
+          <div class="img" style="background: linear-gradient(135deg, #2563eb, #3b82f6), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=60') center/cover;"></div>
           <div class="body">
-            <h3>Your Draft Listing</h3>
-            <p class="meta">Anytown · 3 bed · $450,000</p>
+            <h3>Downtown Family Home</h3>
+            <p class="meta">📍 Downtown District • 3 bed • 2.5 bath • 2,200 sqft</p>
+            <div class="price">$485,000</div>
+            <p class="description">Beautiful modern home with open floor plan, updated kitchen, and spacious backyard.</p>
+            <div class="actions">
+              <button class="btn">Edit Listing</button>
+              <button class="btn ghost">View</button>
+            </div>
           </div>
         </article>
+
         <article class="listing-card">
-          <div class="img"></div>
+          <div class="img" style="background: linear-gradient(135deg, #2563eb, #3b82f6), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=60') center/cover;"></div>
           <div class="body">
-            <h3>Published Listing</h3>
-            <p class="meta">City Center · 2 bed · $320,000</p>
+            <h3>City Center Condo</h3>
+            <p class="meta">📍 City Center • 2 bed • 2 bath • 1,100 sqft</p>
+            <div class="price">$325,000</div>
+            <p class="description">Stunning luxury condo with city views, modern amenities, and secure parking.</p>
+            <div class="actions">
+              <button class="btn">Edit Listing</button>
+              <button class="btn ghost">View</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="listing-card">
+          <div class="img" style="background: linear-gradient(135deg, #2563eb, #3b82f6), url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=60') center/cover;"></div>
+          <div class="body">
+            <h3>Suburban Townhouse</h3>
+            <p class="meta">📍 Suburban Area • 3 bed • 2.5 bath • 1,800 sqft</p>
+            <div class="price">$395,000</div>
+            <p class="description">Charming townhouse with private garden, updated appliances, and excellent school district.</p>
+            <div class="actions">
+              <button class="btn">Edit Listing</button>
+              <button class="btn ghost">View</button>
+            </div>
           </div>
         </article>
       </section>
