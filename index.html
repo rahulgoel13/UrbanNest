@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UrbanNest | Buy and Sell Homes</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="index.html" class="brand" aria-label="UrbanNest">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 10.5L12 3l9 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 10v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M9 21v-6a3 3 0 1 1 6 0v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-text">UrbanNest</span>
+        </a>
+        <nav class="nav-actions">
+          <button id="themeToggle" class="btn ghost icon-btn" type="button" title="Toggle theme">
+            <span class="icon" aria-hidden="true">🌗</span>
+            <span class="label">Theme</span>
+          </button>
+          <a class="btn ghost" href="login.html">Login</a>
+          <a class="btn" href="register.html">Register</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Your next chapter starts here</h1>
+        <p class="subtitle">Find your dream home or get the best value selling yours.</p>
+        <div class="role-cards">
+          <article class="card">
+            <h2>I'm a Buyer</h2>
+            <p>Browse listings, save favorites, and schedule tours.</p>
+            <div class="card-actions">
+              <a class="btn" href="register.html">Get Started</a>
+              <a class="btn ghost" href="login.html?role=buyer">I already have an account</a>
+            </div>
+          </article>
+          <article class="card">
+            <h2>I'm a Seller</h2>
+            <p>List your property and reach verified buyers.</p>
+            <div class="card-actions">
+              <a class="btn" href="register.html">Start Selling</a>
+              <a class="btn ghost" href="login.html?role=seller">I already have an account</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> UrbanNest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+  <script>
+    // Minimal inline script for dynamic year without waiting on main.js
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  </html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buyer | UrbanNest</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="buyer">
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="index.html" class="brand" aria-label="UrbanNest">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 10.5L12 3l9 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 10v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M9 21v-6a3 3 0 1 1 6 0v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-text">UrbanNest</span>
+        </a>
+        <nav class="nav-actions">
+          <button id="themeToggle" class="btn ghost icon-btn" type="button" title="Toggle theme">
+            <span class="icon" aria-hidden="true">🌗</span>
+            <span class="label">Theme</span>
+          </button>
+          <span class="muted">Signed in as <strong data-user-name></strong></span>
+          <a id="logoutBtn" class="btn ghost" href="#">Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="page-header">
+        <h1>Find your home</h1>
+        <span id="roleNote" class="muted"></span>
+      </div>
+
+      <div class="toolbar" style="margin-bottom: 14px;">
+        <input type="text" placeholder="Search by city, ZIP, or address" />
+        <button class="btn">Search</button>
+      </div>
+
+      <section class="grid">
+        <article class="listing-card">
+          <div class="img"></div>
+          <div class="body">
+            <h3>Modern Family Home</h3>
+            <p class="meta">3 bed · 2 bath · 1,800 sqft · $450,000</p>
+          </div>
+        </article>
+        <article class="listing-card">
+          <div class="img"></div>
+          <div class="body">
+            <h3>Urban Apartment</h3>
+            <p class="meta">2 bed · 1 bath · 900 sqft · $320,000</p>
+          </div>
+        </article>
+        <article class="listing-card">
+          <div class="img"></div>
+          <div class="body">
+            <h3>Cozy Cottage</h3>
+            <p class="meta">2 bed · 1 bath · 1,100 sqft · $280,000</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> UrbanNest.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+

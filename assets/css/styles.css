@@ -1,0 +1,360 @@
+:root {
+  /* Light theme palette */
+  --bg: #f8fafc;           /* slate-50 */
+  --panel: #ffffff;         /* white */
+  --muted: #6b7280;         /* gray-500 */
+  --text: #0f172a;          /* slate-900 */
+  --brand: #7c3aed;         /* violet-600 */
+  --brand-600: #6d28d9;     /* violet-700 */
+  --danger: #ef4444;        /* red-500 */
+  --success: #16a34a;       /* green-600 */
+  --border: #e5e7eb;        /* gray-200 */
+
+  /* Accent colors for gradients */
+  --accent-1: #7c3aed;  /* violet */
+  --accent-2: #db2777;  /* pink */
+  --accent-3: #f59e0b;  /* amber */
+
+  /* Header background (light) */
+  --header-bg: rgba(255, 255, 255, 0.75);
+}
+
+/* Dark theme overrides */
+html[data-theme="dark"] {
+  --bg: #0f172a;           /* slate-900 */
+  --panel: #111827;        /* gray-900 */
+  --muted: #94a3b8;        /* slate-400 */
+  --text: #e5e7eb;         /* slate-200 */
+  --border: #1f2937;       /* gray-800 */
+  --header-bg: rgba(15, 23, 42, 0.7);
+
+  /* Dark theme specific overrides */
+  --accent-1: #a855f7;  /* violet-500 for dark */
+  --accent-2: #ec4899;  /* pink-500 for dark */
+  --accent-3: #fbbf24;  /* amber-400 for dark */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(10px);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; }
+.brand svg { width: 24px; height: 24px; display: block; }
+.brand-text {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: transparent;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 18px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: 150ms ease-in-out;
+}
+
+.btn:hover { filter: brightness(0.95); }
+
+.btn.ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn.ghost:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* Compact icon button for theme toggle */
+.icon-btn { padding: 8px 10px; line-height: 1; display: inline-flex; align-items: center; gap: 6px; }
+.icon { display: inline-block; width: 16px; height: 16px; }
+
+.hero {
+  padding: 64px 24px 40px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  /* Solid image (no white overlay) */
+  background: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=60');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  margin: 0 0 8px 0;
+  font-size: clamp(28px, 5vw, 40px);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.subtitle {
+  margin: 0 0 24px 0;
+  color: var(--muted);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 720px) {
+  .role-cards { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3)) border-box;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.card h2 { margin-top: 0; }
+
+.card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+.site-footer .container { padding: 22px 0; text-align: center; color: var(--muted); }
+
+/* Forms */
+.auth-wrapper {
+  display: grid;
+  place-items: center;
+  min-height: calc(100dvh - 76px);
+  padding: 24px 0 40px;
+}
+
+.auth-card {
+  width: min(520px, 92vw);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(90deg, var(--accent-1), var(--accent-2)) border-box;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.auth-card h1 { margin: 0 0 4px 0; }
+.auth-subtitle { margin: 0 0 18px 0; color: var(--muted); }
+
+.form-grid { display: grid; gap: 12px; }
+
+label { font-size: 14px; color: var(--muted); }
+
+input[type="text"], input[type="email"], input[type="password"], select {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+/* Dark theme specific form styles */
+html[data-theme="dark"] input[type="text"],
+html[data-theme="dark"] input[type="email"],
+html[data-theme="dark"] input[type="password"],
+html[data-theme="dark"] select {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+html[data-theme="dark"] input[type="text"]:focus,
+html[data-theme="dark"] input[type="email"]:focus,
+html[data-theme="dark"] input[type="password"]:focus,
+html[data-theme="dark"] select:focus {
+  outline: none;
+  border-color: var(--accent-1);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+.radio-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.radio-row label { color: var(--text); }
+
+/* Dark theme radio button styles */
+html[data-theme="dark"] input[type="radio"] {
+  accent-color: var(--accent-1);
+}
+
+.form-actions { display: flex; gap: 10px; align-items: center; justify-content: space-between; margin-top: 4px; }
+.muted { color: var(--muted); font-size: 14px; }
+
+.error { color: var(--danger); font-size: 14px; }
+.success { color: var(--success); font-size: 14px; }
+
+/* Page shells */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 0 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
+
+.listing-card {
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(90deg, var(--accent-1), var(--accent-2)) border-box;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.listing-card .img { height: 140px; background: linear-gradient(135deg, #e5e7eb, #f3f4f6); }
+
+/* Dark theme listing card image */
+html[data-theme="dark"] .listing-card .img {
+  background: linear-gradient(135deg, #374151, #1f2937);
+}
+
+.listing-card .body { padding: 14px; }
+.listing-card h3 { margin: 0 0 6px 0; }
+.listing-card .meta { color: var(--muted); font-size: 14px; }
+
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; }
+.toolbar input { min-width: 240px; }
+
+/* Dark theme toolbar input */
+html[data-theme="dark"] .toolbar input {
+  background: #1f2937;
+  border-color: #374151;
+  color: var(--text);
+}
+
+html[data-theme="dark"] .toolbar input:focus {
+  border-color: var(--accent-1);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+/* Background imagery for role pages (solid images, no overlay) */
+body[data-page="buyer"] {
+  background: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=60');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body[data-page="seller"] {
+  background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=60');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Dark theme background overlays for better readability */
+html[data-theme="dark"] body[data-page="buyer"],
+html[data-theme="dark"] body[data-page="seller"] {
+  background: 
+    linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
+    url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=60');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+html[data-theme="dark"] body[data-page="seller"] {
+  background: 
+    linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
+    url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=60');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Dark theme hero overlay */
+html[data-theme="dark"] .hero {
+  background: 
+    linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),
+    url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=60');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark theme card gradients */
+html[data-theme="dark"] .card {
+  background: linear-gradient(#111827, #111827) padding-box,
+              linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3)) border-box;
+}
+
+html[data-theme="dark"] .auth-card {
+  background: linear-gradient(#111827, #111827) padding-box,
+              linear-gradient(90deg, var(--accent-1), var(--accent-2)) border-box;
+}
+
+html[data-theme="dark"] .listing-card {
+  background: linear-gradient(#111827, #111827) padding-box,
+              linear-gradient(90deg, var(--accent-1), var(--accent-2)) border-box;
+}
+
+/* Dark theme link colors */
+html[data-theme="dark"] a {
+  color: var(--accent-1);
+}
+
+html[data-theme="dark"] a:hover {
+  color: var(--accent-2);
+}
+
+/* Dark theme button hover states */
+html[data-theme="dark"] .btn.ghost:hover {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: var(--accent-1);
+  color: var(--accent-1);
+}
+
